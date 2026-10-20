@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pomodoro Timer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <div class="tabs" id="tabs">
+    <button data-m="focus" class="on">Focus</button>
+    <button data-m="short">Short break</button>
+    <button data-m="long">Long break</button>
+  </div>
+  <div class="ring">
+    <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" stroke="var(--track)"/><circle id="bar" cx="60" cy="60" r="54"/></svg>
+    <div class="t"><div id="time">25:00</div><div id="label">Time to focus</div></div>
+  </div>
+  <div class="row">
+    <button class="sec" id="reset">Reset</button>
+    <button class="main" id="go">Start</button>
+    <button class="sec" id="skip">Skip</button>
+  </div>
+  <div class="dots" id="dots"></div>
+  <details>
+    <summary>Settings</summary>
+    <div class="set">
+      <label for="s-focus">Focus (min)</label><input id="s-focus" type="number" min="1" max="120">
+      <label for="s-short">Short break (min)</label><input id="s-short" type="number" min="1" max="60">
+      <label for="s-long">Long break (min)</label><input id="s-long" type="number" min="1" max="60">
+    </div>
+  </details>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
